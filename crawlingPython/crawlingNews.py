@@ -9,8 +9,8 @@ URL="http://www.dt.co.kr/section.html?section_num=2000"
 #     print(title.get_text());
 
 def get_one(html):
-    title =html.find("dt", {"class":"tit"}).find("a").get_text();
-    desc = html.find("dd",{"class": "desc"}).find("a").get_text();
+    title =html.find("dt", {"class":"tit"}).find("a").get_text()
+    desc = html.find("dd",{"class": "desc"}).find("a").get_text()
 
     print(title, desc)
 def get_alticles():

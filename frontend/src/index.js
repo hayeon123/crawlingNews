@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
-import DashBoard from './DashBoard'
+import DashBoard from './DashBoardori'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<DashBoard />, document.getElementById('root'));
