@@ -50,4 +50,4 @@ def get_Image():
 if __name__=='__main__':
     print(get_alticles())
     # print("dddd")
-    # print(get_Image())
+    print(get_Image())

@@ -9,3 +9,10 @@ class PostSerializer(serializers.ModelSerializer):
             'desc',
         )
         model = Post
+
+class PostImage(serializers.ModelSerializer):
+    class Meta:
+        fields =(
+            'image'
+        )
+        model = Post

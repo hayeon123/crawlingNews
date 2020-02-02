@@ -25,6 +25,6 @@ def news_list(request):
 
 @api_view(['GET'])
 def news_image(request):
-    img = get_Image()
-    serializers = PostSerializer(img, many=True)
+    image = get_Image()
+    serializers = PostSerializer(image, many=True)
     return Response(serializers.data)

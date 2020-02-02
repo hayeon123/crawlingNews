@@ -10,3 +10,10 @@ class Post(models.Model):
     def __str__(self):
         """A string representation of the model."""
         return self.title
+
+class PostImage(models.Model):
+    objects = models.Manager()
+    image = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.image
