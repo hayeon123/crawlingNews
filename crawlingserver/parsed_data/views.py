@@ -7,6 +7,7 @@ from .models import Post
 from .serializers import PostSerializer
 from .crawlingNews import get_alticles
 # Create your views here.
+from .crawlingNews import get_Image
 
 class ListPost(generics.RetrieveUpdateAPIView):
     queryset = Post.objects.all()
@@ -20,4 +21,10 @@ class DetailPost(generics.RetrieveUpdateDestroyAPIView):
 def news_list(request):
     news = get_alticles()
     serializers = PostSerializer(news, many=True)
+    return Response(serializers.data)
+
+@api_view(['GET'])
+def news_image(request):
+    img = get_Image()
+    serializers = PostSerializer(img, many=True)
     return Response(serializers.data)

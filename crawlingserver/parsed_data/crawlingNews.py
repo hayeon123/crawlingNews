@@ -39,5 +39,17 @@ def get_alticles():
         index += 1
     return news
 
+def get_Image():
+    Image_URL ="http://www.dt.co.kr/"
+    news_result= requests.get(Image_URL)
+    soup = BeautifulSoup(news_result.text,"html.parser")
+    result = soup.find("div",{"class":"main_art_photo"})
+
+    img_src = result.find("img").get_text()
+
+    print(img_src)
+    return img_src
+    
 if __name__=='__main__':
     print(get_alticles())
+    print(get_Image())
